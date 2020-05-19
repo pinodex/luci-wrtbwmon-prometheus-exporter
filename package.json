@@ -1,0 +1,32 @@
+{
+  "name": "luci-wrtbwmon-prometheus-exporter",
+  "version": "1.0.0",
+  "description": "Luci wrtbwmon Prometheus Exporter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pinodex/luci-wrtbwmon-prometheus-exporter.git"
+  },
+  "author": "Raphael Marco <hello@raphaelmarco.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pinodex/luci-wrtbwmon-prometheus-exporter/issues"
+  },
+  "homepage": "https://github.com/pinodex/luci-wrtbwmon-prometheus-exporter#readme",
+  "dependencies": {
+    "neat-csv": "^5.2.0",
+    "ssh2-promise": "^0.1.7",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.4"
+  }
+}
