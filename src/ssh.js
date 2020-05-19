@@ -34,5 +34,8 @@ exports.connect = async function connect(host, username, identity) {
  * @return {String}
  */
 exports.getUsageCsv = async function getUsageCsv(sshClient) {
+  await sshClient.exec('wrtbwmon update /etc/config/usage.db');
+  await sshClient.exec('wrtbwmon publish /etc/config/usage.db /tmp/usage.htm /etc/wrtbwmon.user');
+
   return sshClient.exec('cat /etc/config/usage.db');
 };
