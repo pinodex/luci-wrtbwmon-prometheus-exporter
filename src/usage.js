@@ -28,8 +28,8 @@ exports.parseUsageCsv = async (data) => {
     'inBytes',
     'outBytes',
     'totalBytes',
-    'first_date',
-    'last_date',
+    'firstDate',
+    'lastDate',
   ];
 
   const mapValues = ({ header, value }) => {
@@ -39,8 +39,8 @@ exports.parseUsageCsv = async (data) => {
       case 'total':
         return Number(value);
 
-      case 'first_date':
-      case 'last_date':
+      case 'firstDate':
+      case 'lastDate':
         return new Date(formatDateTime(value));
 
       default:
